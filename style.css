@@ -368,141 +368,142 @@ button {
     }
 }
 
-/* ===========================
-   MOBILE OPTIMIZATION – SAFE FOR DESKTOP
-=========================== */
-
-/* Mobile phones only */
 @media (max-width: 576px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .clock-display {
+        top: 1rem;
+        left: 1rem;
+    }
+    
+    .current-time {
+        font-size: 2rem;
+    }
+    
+    .period {
+        font-size: 1rem;
+    }
+    
+    .rain-toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .container {
+        padding: 2rem 1.5rem;
+        max-width: 95%;
+    }
+    
+    .motivation {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+    
+    .timer-display {
+        margin-bottom: 2rem;
+    }
+    
+    .timer-display .time {
+        font-size: clamp(7.5rem,28vw,9rem);
+    }
+    
+    .timer-display .colon {
+        
+    }
+    
+    .controls {
+        gap: 1rem;
+    }
+    
+    .start-btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .icon-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    /* Mobile phones watcher */
+    .watcher {
+        display: flex !important;  /* Make sure it stays visible */
+        flex-direction: column;
+        align-items: center;
+        right: 1rem;
+        bottom: 1rem;
+        min-width: 120px;  /* smaller width */
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-  body {
-    justify-content: flex-start;
-    padding: 1rem;
-  }
+    .watcher dotlottie-wc {
+        width: 100px;   /* smaller animation */
+        height: 80px;
+    }
 
-  /* Clock */
-  .clock-display {
-    top: 1rem;
-    left: 1rem;
-  }
-
-  .current-time {
-    font-size: 2rem;
-  }
-
-  .period {
-    font-size: 1rem;
-  }
-
-  /* Timer display */
-  .timer-display {
-    gap: 0.4rem;
-    margin-top: 1.5rem;
-  }
-
-  .timer-display .time {
-    font-size: clamp(4.5rem, 16vw, 6.5rem);
-    letter-spacing: 3px;
-  }
-
-  .timer-display .colon {
-    font-size: clamp(4.5rem, 16vw, 6.5rem);
-    margin: 0;
-  }
-
-  /* Controls */
-  .controls {
-    gap: 0.8rem;
-    flex-wrap: nowrap;
+    .watcher-text {
+        font-size: 0.7rem;  /* smaller text */
+        max-width: 120px;
+        text-align: center;
+    }
+    
+    .modal-content {
+        max-width: 90%;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+}
+.sun-toggle {
+    position: absolute;
+    top: 2rem;
+    right: 8rem; /* keep some distance from rain button */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #FFC107; /* sunny yellow */
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
     justify-content: center;
-  }
+    font-size: 1.5rem;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+}
 
-  .start-btn {
-    padding: 1rem 2.2rem;
-    font-size: 1.1rem;
-    border-radius: 40px;
-  }
+.sun-toggle:hover {
+    background: #e6ac00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 193, 7, 0.4);
+}
 
-  .icon-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 1.1rem;
-  }
+.sun-toggle.active {
+    background: #656dc8;
+    color: #0d1b2a;
+}
 
-  /* Watcher animation */
-  .watcher {
-    right: 50%;
-    bottom: 0.5rem;
-    transform: translateX(50%);
-    min-width: unset;
-    opacity: 1;
-  }
-
-  .watcher dotlottie-wc {
-    width: 90px;
-    height: 70px;
-  }
-
-  .watcher-text {
-    font-size: 0.75rem;
-    max-width: 140px;
-    text-align: center;
-  }
-
-  /* Top buttons */
-  .rain-toggle {
-    top: 1rem;
-    right: 1rem;
-    width: 42px;
-    height: 42px;
-  }
-
-  .sun-toggle {
-    top: 1rem;
-    right: 4.3rem;
-    width: 42px;
-    height: 42px;
-  }
-
-  .notes-toggle {
-    top: 1rem;
-    right: 7.6rem;
-    width: 42px;
-    height: 42px;
-  }
-
-  /* Mobile tap feedback (instead of hover) */
-  button:active {
-    transform: scale(0.94);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-  }
-
-  .start-btn:active {
+.sun-toggle.active:hover {
     background: #4a5099;
-  }
-
-  .icon-btn:active {
-    background: #4a5099;
-  }
-
-  .rain-toggle:active,
-  .sun-toggle:active,
-  .notes-toggle:active {
-    transform: scale(0.9);
-    filter: brightness(1.1);
-  }
-
-  /* Motivation text */
-  .motivation {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-  }
-
-  /* Session counter */
-  .session-counter {
-    font-size: 1rem;
-  }
-
+}
+.session-counter {
+    color: #060933;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-family: sans-serif;
 }
 /* Very small phones */
 @media (max-width: 380px) {
