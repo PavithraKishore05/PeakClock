@@ -369,41 +369,58 @@ button {
 }
 
 /* ===========================
-   MOBILE FIX – DESKTOP SAFE
-   =========================== */
+   MOBILE OPTIMIZATION – SAFE FOR DESKTOP
+=========================== */
 
-/* Phones only */
+/* Mobile phones only */
 @media (max-width: 576px) {
 
   body {
     justify-content: flex-start;
+    padding: 1rem;
   }
 
-  /* TIMER */
+  /* Clock */
+  .clock-display {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .current-time {
+    font-size: 2rem;
+  }
+
+  .period {
+    font-size: 1rem;
+  }
+
+  /* Timer display */
   .timer-display {
     gap: 0.4rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   .timer-display .time {
-    font-size: clamp(4.8rem, 16vw, 7.2rem);
+    font-size: clamp(4.5rem, 16vw, 6.5rem);
     letter-spacing: 3px;
   }
 
   .timer-display .colon {
-    font-size: clamp(4.8rem, 16vw, 7.2rem);
+    font-size: clamp(4.5rem, 16vw, 6.5rem);
     margin: 0;
   }
 
-  /* CONTROLS */
+  /* Controls */
   .controls {
-    flex-wrap: nowrap;
     gap: 0.8rem;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 
   .start-btn {
-    padding: 0.9rem 2.2rem;
+    padding: 1rem 2.2rem;
     font-size: 1.1rem;
+    border-radius: 40px;
   }
 
   .icon-btn {
@@ -412,7 +429,7 @@ button {
     font-size: 1.1rem;
   }
 
-  /* WATCHER – CENTERED & CLEAN */
+  /* Watcher animation */
   .watcher {
     right: 50%;
     bottom: 0.5rem;
@@ -427,11 +444,12 @@ button {
   }
 
   .watcher-text {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     max-width: 140px;
+    text-align: center;
   }
 
-  /* TOP BUTTONS – NO COLLISION */
+  /* Top buttons */
   .rain-toggle {
     top: 1rem;
     right: 1rem;
@@ -452,6 +470,39 @@ button {
     width: 42px;
     height: 42px;
   }
+
+  /* Mobile tap feedback (instead of hover) */
+  button:active {
+    transform: scale(0.94);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+
+  .start-btn:active {
+    background: #4a5099;
+  }
+
+  .icon-btn:active {
+    background: #4a5099;
+  }
+
+  .rain-toggle:active,
+  .sun-toggle:active,
+  .notes-toggle:active {
+    transform: scale(0.9);
+    filter: brightness(1.1);
+  }
+
+  /* Motivation text */
+  .motivation {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Session counter */
+  .session-counter {
+    font-size: 1rem;
+  }
+
 }
 /* Very small phones */
 @media (max-width: 380px) {
