@@ -164,7 +164,7 @@ h1 {
 
 .time {
     color: #060933;
-    font-size: 20rem;
+    font-size: clamp(6rem,18vw,20rem);
     font-weight: 700;
     line-height: 1;
     letter-spacing: 10px;
@@ -173,7 +173,7 @@ h1 {
 
 .colon {
     color: #060933;
-    font-size: 11rem;
+    font-size: clamp(4rem,12vw,11rem);
     font-weight: 700;
     margin: 0 0.5rem;
     font-family: 'Agdasima', sans-serif;
@@ -390,13 +390,17 @@ button {
     }
     
     .container {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        gap:1.2rem;
         padding: 2rem 1.5rem;
         max-width: 100%;
     }
     
     .motivation {
         font-size: 4vw;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
         font-style: italic;
     }
     
@@ -417,6 +421,7 @@ button {
         gap: 0.8rem;
         flex-wrap:wrap;
         justify-content:center;
+        margin-bottom: 8rem;
     }
     
     .start-btn {
@@ -432,24 +437,24 @@ button {
     
     /* Mobile phones watcher */
     .watcher {
-        display: flex important;  /* Make sure it stays visible */
+       display: flex important;  /* Make sure it stays visible */
         flex-direction: column;
         align-items: center;
-        right: 3rem;
-        bottom: 2rem;
+        right:3rem;
+        bottom: 0.2rem;
         min-width: 120px;  /* smaller width */
         opacity: 1;
         transform: translateY(0);
     }
 
     .watcher dotlottie-wc {
-        width: 100px;   /* smaller animation */
-        height: 60px;
+        width: 120px;   /* smaller animation */
+        height: 120px;
     }
 
     .watcher-text {
-        font-size: 0.7rem;  /* smaller text */
-        max-width: 120px;
+        font-size: 0.75rem;  /* smaller text */
+        max-width: 140px;
         text-align: center;
     }
     
@@ -637,43 +642,4 @@ button {
     font-family: inherit;
     font-size: 1rem;
     outline: none;
-}
-/* Tablets */
-@media (max-width: 768px) {
-    .notes-modal {
-        width: 260px;
-        height: 340px;
-        right: 1.5rem;
-    }
-
-    #notesTextarea {
-        font-size: 0.95rem;
-    }
-}
-
-/* Small phones */
-@media (max-width: 576px) {
-    .notes-modal {
-        width: 210px;
-        height: 280px;
-        top: 4rem;
-        right: 1rem;
-    }
-
-    #notesTextarea {
-        font-size: 0.9rem;
-    }
-}
-/* very Small phones */
-@media (max-width: 380px) {
-    .notes-modal {
-        width: 180px;
-        height: 240px;
-        top: 3.5rem;
-        right: 0.5rem;
-    }
-
-    #notesTextarea {
-        font-size: 0.85rem;
-    }
 }
