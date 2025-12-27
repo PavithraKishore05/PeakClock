@@ -368,143 +368,90 @@ button {
     }
 }
 
+/* ===========================
+   MOBILE FIX – DESKTOP SAFE
+   =========================== */
+
+/* Phones only */
 @media (max-width: 576px) {
-    body {
-        padding: 1rem;
-    }
-    
-    .clock-display {
-        top: 1rem;
-        left: 1rem;
-    }
-    
-    .current-time {
-        font-size: 2rem;
-    }
-    
-    .period {
-        font-size: 1rem;
-    }
-    
-    .rain-toggle {
-        top: 1rem;
-        right: 1rem;
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-    }
-    
-    .container {
-        padding: 2rem 1.5rem;
-        max-width: 95%;
-    }
-    
-    .motivation {
-        font-size: 0.95rem;
-        margin-bottom: 2rem;
-    }
-    
-    .timer-display {
-        margin-bottom: 2rem;
-    }
-    
-    .timer-display .time {
-        font-size: 6rem;
-    }
-    
-    .timer-display .colon {
-        font-size: 6rem;
-        margin: 0 0.5rem;
-    }
-    
-    .controls {
-        gap: 1rem;
-    }
-    
-    .start-btn {
-        padding: 1rem 2.5rem;
-        font-size: 1.2rem;
-    }
-    
-    .icon-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
-    }
-    
-    /* Mobile phones watcher */
-    .watcher {
-        display: flex !important;  /* Make sure it stays visible */
-        flex-direction: column;
-        align-items: center;
-        right: 1rem;
-        bottom: 1rem;
-        min-width: 120px;  /* smaller width */
-        opacity: 1;
-        transform: translateY(0);
-    }
 
-    .watcher dotlottie-wc {
-        width: 100px;   /* smaller animation */
-        height: 80px;
-    }
+  body {
+    justify-content: flex-start;
+  }
 
-    .watcher-text {
-        font-size: 0.7rem;  /* smaller text */
-        max-width: 120px;
-        text-align: center;
-    }
-    
-    .modal-content {
-        max-width: 90%;
-        padding: 1.5rem;
-        margin: 1rem;
-    }
-    
-    .modal-content h2 {
-        font-size: 1.5rem;
-    }
-}
-.sun-toggle {
-    position: absolute;
-    top: 2rem;
-    right: 8rem; /* keep some distance from rain button */
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #FFC107; /* sunny yellow */
-    color: white;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    z-index: 100;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
-}
+  /* TIMER */
+  .timer-display {
+    gap: 0.4rem;
+    margin-top: 2rem;
+  }
 
-.sun-toggle:hover {
-    background: #e6ac00;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255, 193, 7, 0.4);
-}
+  .timer-display .time {
+    font-size: clamp(4.8rem, 16vw, 7.2rem);
+    letter-spacing: 3px;
+  }
 
-.sun-toggle.active {
-    background: #656dc8;
-    color: #0d1b2a;
-}
+  .timer-display .colon {
+    font-size: clamp(4.8rem, 16vw, 7.2rem);
+    margin: 0;
+  }
 
-.sun-toggle.active:hover {
-    background: #4a5099;
-}
-.session-counter {
-    color: #060933;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-top: 1rem;
-    font-family: sans-serif;
+  /* CONTROLS */
+  .controls {
+    flex-wrap: nowrap;
+    gap: 0.8rem;
+  }
+
+  .start-btn {
+    padding: 0.9rem 2.2rem;
+    font-size: 1.1rem;
+  }
+
+  .icon-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+
+  /* WATCHER – CENTERED & CLEAN */
+  .watcher {
+    right: 50%;
+    bottom: 0.5rem;
+    transform: translateX(50%);
+    min-width: unset;
+    opacity: 1;
+  }
+
+  .watcher dotlottie-wc {
+    width: 90px;
+    height: 70px;
+  }
+
+  .watcher-text {
+    font-size: 0.7rem;
+    max-width: 140px;
+  }
+
+  /* TOP BUTTONS – NO COLLISION */
+  .rain-toggle {
+    top: 1rem;
+    right: 1rem;
+    width: 42px;
+    height: 42px;
+  }
+
+  .sun-toggle {
+    top: 1rem;
+    right: 4.3rem;
+    width: 42px;
+    height: 42px;
+  }
+
+  .notes-toggle {
+    top: 1rem;
+    right: 7.6rem;
+    width: 42px;
+    height: 42px;
+  }
 }
 /* Very small phones */
 @media (max-width: 380px) {
