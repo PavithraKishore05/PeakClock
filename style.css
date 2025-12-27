@@ -368,7 +368,6 @@ button {
     }
 }
 
-/* Mobile phones */
 @media (max-width: 576px) {
     body {
         padding: 1rem;
@@ -507,7 +506,6 @@ button {
     margin-top: 1rem;
     font-family: sans-serif;
 }
-
 /* Very small phones */
 @media (max-width: 380px) {
     .clock-display {
