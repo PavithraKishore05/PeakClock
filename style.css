@@ -10,7 +10,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: url('background.png') center/cover no-repeat fixed;
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,13 +56,13 @@ body {
 }
 
 .clock-display {
-    position: absolute;
-    top: 2rem;
-    left: 4rem;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
     display: flex;
     align-items: baseline;
-    gap: 0.5rem;
-    z-index: 10;
+    gap: 0.4rem;
+    z-index: 50;
 }
 
 .current-time {
@@ -80,14 +80,13 @@ body {
 }
 
 .watcher {
-    position: absolute;
-    right: 3rem;
-    bottom: 0.5rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
     display: none;
     flex-direction: column;
     align-items: center;
-    z-index: 10;
-    min-width: 300px;
+    z-index: 20;
     opacity: 0;
     transform: translateY(50px);
 }
@@ -126,7 +125,9 @@ body {
 
 .container {
     text-align: center;
-    z-index: 1;
+    max-width: 900px;
+    width: 100%;
+    padding: 2 rem 1.5 rem;
 }
 
 h1 {
@@ -164,7 +165,7 @@ h1 {
 
 .time {
     color: #060933;
-    font-size: clamp(6rem,18vw,20rem);
+    font-size: clamp(5rem,16vw,15rem);
     font-weight: 700;
     line-height: 1;
     letter-spacing: 10px;
@@ -183,7 +184,7 @@ h1 {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    align-items: center;
+    flex-wrap:center ;
 }
 
 button {
@@ -365,7 +366,7 @@ button {
 /* Mobile phones */
 @media (max-width: 576px) {
     body {
-        padding: 1rem;
+        padding: 0.25rem;
     }
     
     .clock-display {
@@ -405,7 +406,7 @@ button {
     }
     
     .timer-display {
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
     }
     
     .timer-display .time {
@@ -421,7 +422,7 @@ button {
         gap: 0.8rem;
         flex-wrap:wrap;
         justify-content:center;
-        margin-bottom: 12rem;
+        margin-bottom: 15vh;
     }
     
     .start-btn {
@@ -437,11 +438,10 @@ button {
     
     /* Mobile phones watcher */
     .watcher {
-       display: flex important;  /* Make sure it stays visible */
-      
+       display: flex important;  
         align-items: center;
         right:3rem;
-        bottom: 0.5rem;
+        bottom: 0.25rem;
         min-width: 120px;  /* smaller width */
         opacity: 1;
     }
