@@ -83,10 +83,9 @@ body {
     position: absolute;
     right: 3rem;
     bottom: 3rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
-    margin-top: auto;
     z-index: 10;
     min-width: 300px;
     opacity: 0;
@@ -120,8 +119,6 @@ body {
     color: #060933;
     font-size: 1.1rem;
     font-weight: 600;
-    margin-top: 1.2rem;
-    margin-bottom: 0.8rem;
     text-align: center;
     max-width: 200px;
     line-height: 1.4;
@@ -183,8 +180,6 @@ h1 {
 }
 
 .controls {
-    margin-top: 1.5rem;
-    margin-bottom:2.5rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -426,7 +421,7 @@ button {
         gap: 0.8rem;
         flex-wrap:wrap;
         justify-content:center;
-        margin-bottom: 3rem;
+        margin-bottom: 8rem;
     }
     
     .start-btn {
@@ -458,7 +453,7 @@ button {
     }
 
     .watcher-text {
-        font-size: 0.8rem;  /* smaller text */
+        font-size: 0.75rem;  /* smaller text */
         max-width: 140px;
         text-align: center;
     }
@@ -514,6 +509,7 @@ button {
     margin-top: 1.5rem;
     font-family: sans-serif;
 }
+
 
 .notes-toggle {
     position: absolute;
