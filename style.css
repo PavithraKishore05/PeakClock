@@ -82,7 +82,7 @@ body {
 .watcher {
     position: absolute;
     right: 3rem;
-    bottom: 3rem;
+    bottom: 1rem;
     display: none;
     flex-direction: column;
     align-items: center;
