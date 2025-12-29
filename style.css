@@ -440,21 +440,27 @@ button {
     .watcher {
        display: flex important;  
         align-items: center;
+        gap: 0;
         right:3rem;
         bottom: 0.25rem;
+        margin-top:2rem;
         min-width: 120px;  /* smaller width */
         opacity: 1;
     }
 
     .watcher dotlottie-wc {
-        width: 120px;   /* smaller animation */
-        height: 120px;
+        width: 110px;   /* smaller animation */
+        height: 110px;
+        top: 1.2rem;
     }
 
     .watcher-text {
         font-size: 0.75rem;  /* smaller text */
         max-width: 140px;
         text-align: center;
+        margin-bottom: -0.8rem;
+        margin-top: 0;
+        line-height: 1.1;
     }
     
     .modal-content {
