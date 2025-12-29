@@ -15,10 +15,7 @@
         <div class="period" id="currentPeriod">PM</div>
     </div>
 
-    <div class="watcher" id="watcher">
-        <p class="watcher-text">I've got my eye on you, work hard!</p>
-        <dotlottie-wc src="https://lottie.host/d909ec07-78e9-4516-b721-164d83182a31/EJYCIm4AxS.lottie" autoplay loop></dotlottie-wc>
-    </div>
+    
 
     <!-- Audio elements -->
     <audio id="notificationSound" preload="auto">
@@ -37,6 +34,17 @@
 <button class="sun-toggle" id="sunToggle">
     <i class="fas fa-sun"></i>
 </button>
+<!-- Notes toggle button -->
+<button class="notes-toggle" id="notesToggle">
+    <i class="fas fa-sticky-note"></i>
+</button>
+<div class="notes-modal" id="notesModal">
+    <div class="notes-header" id="notesHeader">
+        <span>Notes</span>
+        <button id="closeNotes">&times;</button>
+    </div>
+    <textarea id="notesTextarea" placeholder="Type your notes here..."></textarea>
+</div>
     <div class="container">
         <div class="motivation" id="motivation">Keep going, don't stop now!</div>
 
@@ -74,16 +82,11 @@
             </div>
         </div>
     </div>
-<!-- Notes toggle button -->
-<button class="notes-toggle" id="notesToggle">
-    <i class="fas fa-sticky-note"></i>
-</button>
-<div class="notes-modal" id="notesModal">
-    <div class="notes-header" id="notesHeader">
-        <span>Notes</span>
-        <button id="closeNotes">&times;</button>
-    </div>
-    <textarea id="notesTextarea" placeholder="Type your notes here..."></textarea>
+
+
+<div class="watcher" id="watcher">
+        <p class="watcher-text">I've got my eye on you, work hard!</p>
+        <dotlottie-wc src="https://lottie.host/d909ec07-78e9-4516-b721-164d83182a31/EJYCIm4AxS.lottie" autoplay loop></dotlottie-wc>
 </div>
     <script src="script.js"></script>
 </body>
